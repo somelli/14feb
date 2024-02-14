@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300;400&family=Josefin+Sans&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 600px;
+    background-color: #c6a3a8;
+    font-family: Alegreya Sans SC;
+    font-size: 20px;
+    margin-bottom: 0px;
+    font-weight: 400;
+    text-align: center;
+    color: #000000;
+}
+
+h1 {
+    font-size: 35px;
+}
+
+.word {
+    border: none;
+    border-bottom: 2px solid #513335;
+    background-color: transparent;
+    color: #513335;
+    outline: none;
+}
+
+.word::placeholder {
+    font-family: Alegreya Sans SC;
+    font-size: 15px;
+    color: #513335;
+}
+
+#inputContainer>button {
+    font-family: Alegreya Sans SC;
+    font-size: 15px;
+    margin-bottom: 0px;
+    font-weight: 400;
+    text-align: center;
+    color: whitesmoke;
+    background-color: #513335;
+    border: #513335;
+    border-radius: 10%;
+}
+
+#popupContainer>button {
+    font-family: Alegreya Sans SC;
+    font-size: 15px;
+    margin-bottom: 0px;
+    font-weight: 400;
+    text-align: center;
+    color: whitesmoke;
+    background-color: #513335;
+    border: #513335;
+    border-radius: 10%;
+}
+
+footer {
+    padding-top: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+#help {
+    text-decoration: none;
+    cursor: pointer;
+    color: #000000;
+    font-family: Josefin Sans;
+    font-size: 15px;
+
+}
+
+.secret {
+    width: 250px;
+    height: 150px;
+    border: none;
+    background-color: transparent;
+}

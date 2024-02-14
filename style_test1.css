@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300;400&family=Josefin+Sans&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 600px;
+    background-color: #c6a3a8;
+}
+
+p {
+    font-family: Alegreya Sans SC;
+    font-size: 20px;
+    margin-bottom: 0px;
+    font-weight: 400;
+    text-align: center;
+    color: #000000;
+}
+
+.answer_btn {
+    background-color: #513335;
+    font-family: Alegreya Sans SC;
+    color: whitesmoke;
+    font-size: 15px;
+    margin-bottom: 0px;
+    font-weight: 300;
+    border: #513335;
+    border-radius: 15%;
+}
+
+#answerOptions {
+    padding: 0px;
+}
+
+#questionContainer {
+    font-family: Alegreya Sans SC;
+    font-size: 20px;
+    margin-bottom: 0px;
+    font-weight: 300;
+    text-align: center;
+    color: #000000;
+}
+
+#resultText {
+    font-family: Alegreya Sans SC;
+    font-size: 20px;
+    margin-bottom: 0px;
+    font-weight: 400;
+    text-align: center;
+    color: #000000;
+}
+
+li::marker {
+    color: transparent;
+}
+
+.answer_btn2 {
+    display: block;
+    background-color: #513335;
+    font-family: Alegreya Sans SC;
+    color: whitesmoke;
+    font-size: 15px;
+    margin-bottom: 0px;
+    font-weight: 300;
+    border: #513335;
+    border-radius: 15%;
+    margin: 20px auto;
+
+}
+
+footer {
+    padding-top: 200px;
+    display: flex;
+    justify-content: space-between
+}
+
+footer>a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #000000;
+    font-family: Alegreya Sans SC;
+    font-size: 15px;
+    margin-bottom: 0px;
+    font-weight: 400;
+}
+
+#help {
+    text-decoration: none;
+    cursor: pointer;
+    color: #000000;
+    font-family: Josefin Sans;
+    font-size: 15px;
+
+}

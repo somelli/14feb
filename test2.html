@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Этап 2</title>
+    <link rel="stylesheet" href="style_test2.css" />
+
+</head>
+
+<body>
+    <h1>Нашел, но теперь ещё кое что нужно найти)</h1>
+    <div id="inputContainer">
+        <label for="inputWord">Найди правильное слово:</label>
+        <input class="word" type="text" id="inputWord" placeholder="сюда ʕ ᵔᴥᵔ ʔ">
+        <button onclick="checkWord()">Проверить</button>
+    </div>
+    <div id="popupContainer" style="display: none;">
+        <p id="popupText"></p>
+        <button onclick="restartTest()">Начать заново</button>
+    </div>
+
+    <script>
+        var correctWord = "солнце";
+
+        function checkWord() {
+            var inputWord = document.getElementById("inputWord").value.toLowerCase();
+            if (inputWord === correctWord) {
+                showPopup("Правильно! Пасхалка: 20d0bfd0bed0b420d0bad0bbd0b0d0b2d183. Нажми в левом нижнем углу.");
+            } else {
+                showPopup("Неправильно. Попробуй еще раз.");
+            }
+        }
+
+        function showPopup(text) {
+            document.getElementById("inputContainer").style.display = "none";
+            document.getElementById("popupText").textContent = text;
+            document.getElementById("popupContainer").style.display = "block";
+        }
+
+        function restartTest() {
+            document.getElementById("inputWord").value = "";
+            document.getElementById("popupContainer").style.display = "none";
+            document.getElementById("inputContainer").style.display = "block";
+        }
+    </script>
+
+    <footer>
+
+        <button onclick="location.href='test3.html'" class="secret" type="button"></button>
+
+        <a id="help" title="Опять ответ тут?))" target="_blank" href="https://t.me/somelli" alt>@by somelli</a>
+
+    </footer>
+</body>
+
+</html>

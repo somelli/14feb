@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300;400&family=Josefin+Sans&display=swap');
+
+body {
+    background: linear-gradient(to right, #9c6263, #c6a3a8);
+}
+
+h1 {
+    font-family: Alegreya Sans SC;
+    font-size: 50px;
+    font-weight: 400;
+    text-align: center;
+    color: #000000;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+}
+
+p {
+    font-family: Alegreya Sans SC;
+    font-size: 20px;
+    margin-bottom: 0px;
+    font-weight: 300;
+    text-align: center;
+    color: #000000;
+}
+
+.button {
+    text-decoration: none;
+    cursor: pointer;
+    font-family: Alegreya Sans SC;
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 100px;
+    color: #000000;
+    animation-name: button_start;
+    animation-duration: 3.5s;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes button_start {
+    0% {
+        font-size: 25px;
+        ;
+    }
+
+    50% {
+        font-size: 30px;
+    }
+
+    100% {
+        font-size: 25px;
+    }
+}
+
+footer {
+    padding-top: 200px;
+    display: flex;
+    justify-content: flex-end
+}
+
+footer>a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #000000;
+    font-family: Josefin Sans;
+    font-size: 15px;
+
+}

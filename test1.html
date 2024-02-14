@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Этап 1</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style_test1.css" />
+
+</head>
+
+<body>
+
+    <p>Чтобы дойти до конца, тебе нужно собрать 2 набора букв. Сохраняй их! <br>Позже я скажу что с ними делать.
+    </p>
+
+    <div id="questionContainer">
+        <h3 id="questionText"></h3>
+        <ul id="answerOptions"></ul>
+        <button class="answer_btn" onclick="checkAnswer()">Ответить</button>
+    </div>
+    <div id="resultContainer" style="display: none;">
+        <h3 id="resultText"></h3>
+    </div>
+
+    <script>
+        // Массив с вопросами и правильными ответами
+        var questions = [
+            {
+                question: "Дата годовщины:",
+                options: ["26.09", "29.09", "01.10"],
+                answer: 1
+            },
+            {
+                question: "Полное имя моей собаки ¯ \ _ (ツ) _ / ¯:",
+                options: ["Глория", "Лориэль", "Лаура"],
+                answer: 0
+            },
+            {
+                question: "Какой мой любимый исполнитель: ",
+                options: ["Макс Корж", "Папин Олимпос", "ЛСП"],
+                answer: 2
+            }
+        ];
+
+        var currentQuestion = 0;
+        var correctAnswers = 0;
+
+        function checkAnswer() {
+            var selectedAnswer = $("input[name='answer']:checked").val();
+            if (selectedAnswer == questions[currentQuestion].answer) {
+                correctAnswers++;
+                currentQuestion++;
+                if (currentQuestion < questions.length) {
+                    showQuestion();
+                } else {
+                    showResult();
+                }
+            } else {
+                restartTest();
+            }
+        }
+
+        function showQuestion() {
+            var question = questions[currentQuestion];
+            $("#questionText").text(question.question);
+            var options = question.options;
+            var optionsHtml = "";
+            for (var i = 0; i < options.length; i++) {
+                optionsHtml += "<li><input type='radio' name='answer' value='" + i + "'> " + options[i] + "</li>";
+            }
+            $("#answerOptions").html(optionsHtml);
+        }
+
+        function showResult() {
+            $("#questionContainer").hide();
+            $("#resultText").text("Молодец! Все ответы правильные. \nПасхалка: d0b7d0b0d0b3d0bbd18fd0bdd0b8");
+            $("#resultContainer").show();
+        }
+
+        function restartTest() {
+            currentQuestion = 0;
+            correctAnswers = 0;
+            showQuestion();
+            $("#resultContainer").hide();
+            $("#questionContainer").show();
+        }
+
+        // Показываем первый вопрос при загрузке страницы
+        showQuestion();
+    </script>
+
+    <footer>
+
+        <a href="index.html">После теста нажми <b>сюда</b> и поищи там что нибудь)</a>
+        <a id="help" href="https://t.me/somelli" alt>@by somelli</a>
+
+
+    </footer>
+</body>
+
+</html>

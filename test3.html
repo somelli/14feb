@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конец</title>
+    <link rel="stylesheet" href="style_test3.css" />
+    <script>
+        function checkWord() {
+            var input = document.getElementById("wordInput").value.toLowerCase();
+            if (input === "d0b7d0b0d0b3d0bbd18fd0bdd0b820d0bfd0bed0b420d0bad0bbd0b0d0b2d183") {
+                window.location.href = "https://dencode.com/";
+            } else {
+                document.getElementById("message").textContent = "Попробуйте еще раз";
+            }
+        }
+    </script>
+
+<body>
+    <header>
+
+        <p>Вот и конец! Осталось всего лишь собрать воедино то, что ты собрал.<br>Сложи две пасхалки, там есть то, что
+            тебе поможет <br>↓</p>
+
+    </header>
+
+    <section>
+        <input class="word" type="text" id="wordInput" placeholder="сюда ʕ ᵔᴥᵔ ʔ">
+        <button onclick="checkWord()">Проверить</button>
+        <p id="message"></p>
+    </section>
+
+    <footer>
+
+        <a href="https://t.me/somelli" alt>@by somelli</a>
+
+    </footer>
+</body>
+
+</html>
